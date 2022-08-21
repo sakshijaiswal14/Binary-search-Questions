@@ -16,7 +16,6 @@ public:
                 ans=mid;
                 break;
             }
-            cout<<l<<" "<<h<<endl;
         }
         return ans;
     }
