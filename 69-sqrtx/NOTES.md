@@ -1,4 +1,10 @@
-CRITICAL TESTCASE- 2147395599
+CRITICAL TESTCASE
+8
+10
+15
+0
+8799999
+2147483647
 
 ```
 int mySqrt(int x) {
@@ -18,8 +24,6 @@ int mySqrt(int x) {
                 break;
             }
         }
-        return ans;
- }       
         
 ```
 
@@ -42,3 +46,32 @@ int mySqrt(int x) {
         return r;
     }
 ```
+
+**Find Nth root of M**
+[https://practice.geeksforgeeks.org/problems/find-nth-root-of-m5843/1](http://)
+```
+double multiply(double mid,int n){
+    double val=1;
+    for(int i=1;i<=n;i++){
+        val*=mid;
+    }
+    return val;
+}
+double findNthRootOfM(int n, int m) {
+	// Write your code here.
+    double mid,l=1,h=m;
+    while(h-l>1e-7){
+        mid=(h+l)/2;
+//         cout<<mid<<" ";
+        if(multiply(mid,n)>m){
+            h=mid;
+        }
+        else{
+            l=mid;
+        }
+//         cout<<l<<" "<<h<<endl;
+    }
+    return mid;
+}
+```
+
