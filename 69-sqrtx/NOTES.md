@@ -48,7 +48,7 @@ int mySqrt(int x) {
 ```
 
 **Find Nth root of M**
-[https://practice.geeksforgeeks.org/problems/find-nth-root-of-m5843/1](http://)
+[https://practice.geeksforgeeks.org/problems/find-nth-root-of-m5843/1]
 ```
 double multiply(double mid,int n){
     double val=1;
