@@ -18,6 +18,8 @@ int mySqrt(int x) {
                 break;
             }
         }
+        return ans;
+ }       
         
 ```
 
