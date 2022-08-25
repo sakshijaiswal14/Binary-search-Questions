@@ -1,19 +1,23 @@
 class Solution {
 public:
     int mySqrt(int x) {
-        if(x <= 1)
-            return x;
-
-        int l = 0, r = x;
-        while(l <= r){
-            int m = l + (r-l)/2;
-            if(x / m == m)
-                return m;
-            else if(x / m < m)
-                r = m-1;
-            else
-                l = m+1;
+        double l=0, h=x;
+        int ans=0;
+        while(l<=h){
+            double mid=(l+h)/2;
+            long int num=mid*mid;
+            if(num<x){
+                l=mid;
+            }
+            else if(num>x){
+                h=mid;
+            }
+            else{
+                ans=mid;
+                break;
+            }
+            // cout<<l<<" "<<h<<" "<<mid<<endl;
         }
-        return r;
+        return ans;
     }
 };
